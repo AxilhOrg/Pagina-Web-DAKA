@@ -1,0 +1,115 @@
+/* servicios.css: Estilos específicos para la página Servicios */
+
+.services-hero {
+    /* CLAVE: Padding superior para que el header fijo NO tape el contenido */
+    padding-top: 150px; 
+    padding-bottom: 80px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.services-hero h1 {
+    font-size: 3rem;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+.services-hero p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Sección de Grid de Portafolio */
+.portfolio-grid-section {
+    padding: 40px 4%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.area-title {
+    font-size: 2rem;
+    color: #E30613; /* Título de cada área en Rojo DAKA */
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.portfolio-grid {
+    display: grid;
+    /* Grid de 2 columnas para Software y Fiscal, y 4 columnas para Web */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Estilo para las tarjetas de Proyectos */
+.project-card, .benefit-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden; 
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+.project-card:hover, .benefit-card:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el ratón */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+.project-card h4 {
+    font-size: 1.3rem;
+    padding: 15px;
+    color: #1a1a1a;
+}
+.project-card p {
+    padding: 0 15px 15px;
+    color: #666;
+}
+
+/* Estilo para las Tarjetas de Beneficios (CFDI/Legal) */
+.benefit-card {
+    padding: 20px;
+    border-left: 5px solid #13396D; /* Borde azul para destacar */
+}
+.benefit-card i {
+    font-size: 2.5rem;
+    color: #13396D;
+    margin-bottom: 10px;
+}
+
+/* Grid especial para Sitios Web (solo miniaturas) */
+.web-design-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas de miniaturas */
+    gap: 10px;
+}
+.web-design-grid img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.web-design-grid img:hover {
+    transform: scale(1.05);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .web-design-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* Una sola columna para móviles */
+    }
+}

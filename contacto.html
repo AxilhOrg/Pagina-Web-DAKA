@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - DAKA Technology</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="contacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo"> 
+            <img src="img/LogoDaka.svg" alt="Logo de Daka Technology"> 
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li class="active"><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </header>
+
+    <main>
+        
+        <section id="contacto" class="contact-section">
+            <h2>¡Ponte en contacto con nosotros!</h2>
+            <p>¿Quieres automatizar tus procesos con IA? Estamos listos para ayudarte.</p>
+
+            <div class="contact-buttons-container">
+                <div class="contact-button call-button">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>Llámanos</span>
+                </div>
+                <div class="contact-button email-button">
+                    <i class="far fa-envelope"></i>
+                    <span>Email</span>
+                </div>
+            </div>
+
+            <form class="contact-form" action="https://formspree.io/f/xeorvqpz" method="POST">
+                <div class="form-row">
+                    <input type="text" name="nombre" placeholder="Nombre">
+                    <input type="text" name="apellidos" placeholder="Apellidos">
+                </div>
+                <input type="email" name="_replyto" placeholder="Email">
+                <textarea name="mensaje" placeholder="Más detalles de tu idea"></textarea>
+                
+                <input type="hidden" name="_next" value="contacto.html" /> 
+
+                <button type="submit" class="submit-button">Enviar</button>
+            </form>
+        </section>
+
+        <section class="contact-info-cards">
+            <div class="cards-container">
+                
+                <div class="info-card address-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Dirección</h3>
+                    <p>Sur 107 No. 1315, Aeronáutica Militar</p>
+                    <p>Venustiano Carranza, CDMX, 15970</p>
+                </div>
+                
+                <div class="info-card email-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p><a href="mailto:contacto@daka.com.mx">contacto@daka.com.mx</a></p>
+                </div>
+
+                <div class="info-card phone-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>Llámanos</h3>
+                    <p><a href="tel:+525513691795">55 1369 1795</a></p>
+                </div>
+                
+            </div>
+
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3601.13419684408!2d-99.11866242506225!3d19.420273141075004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1feedf0225a53%3A0x66e69305e4efd1e!2sDAKA%20Technology!5e1!3m2!1ses-419!2smx!4v1760473564243!5m2!1ses-419!2smx" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+    <div class="footer-content">
+        
+        <div class="footer-col logo-column">
+            <img src="img/LogoDaka.png" alt="Logo de DAKA Technology" class="footer-logo">
+        </div>
+
+        <div class="footer-col contact-info-col">
+            <p class="email-address">
+                <a href="mailto:contacto@daka.com.mx">✉ contacto@daka.com.mx</a>
+            </p>
+        </div>
+
+        <div class="footer-col company-col">
+            <h4 class="col-title">Compañía</h4>
+            <ul class="footer-links">
+                <li><a href="#inicio">Home</a></li>
+                <li><a href="contacto.html">Contáctanos</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col legal-info-col">
+            <h4 class="col-title">Legal</h4>
+            <ul class="footer-links">
+                <li><a href="#">Aviso de Privacidad</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col social-chat">
+            <div class="chat-prompt">
+                <img src="img/robot.gif" alt="Robot de chat" class="robot-gif">
+                <span>Envíenos un mensaje</span>
+                </div>
+            
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-linkedin"></i></a> 
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-copyright">
+        <p>© All Rights Reserved. © 2019 DAKA Design By :DAKA </p>
+    </div>
+</footer>
+</body>
+</html>

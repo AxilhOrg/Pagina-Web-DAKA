@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA Demo - Visión por Computadora - DAKA Technology</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.13.0/dist/tf.min.js"></script>
+    
+    <link rel="stylesheet" href="base.css"> 
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="ia-demo.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    
+    <header>
+        <div class="logo"> 
+            <img src="img/LogoDaka.svg" alt="Logo de DAKA Technology"> 
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li class="active"><a href="#">IA Demo</a></li> 
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </header>
+
+    <main>
+        
+        <section class="ia-demo-section">
+            <div class="ia-intro-text">
+                <h1>Visión por Computadora impulsada por DAKA AI</h1>
+                <p>Nuestra IA analiza imágenes en tiempo real para identificar daños viales y objetos urbanos. Sube una imagen o usa tu cámara para probarla.</p>
+            </div>
+
+            <div class="ia-demo-container">
+                
+                <div class="control-panel">
+                    <h3>Seleccionar Fuente de Detección</h3>
+                    
+                    <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+                    
+                    <button id="uploadButton" class="cta-button">
+                        <i class="fas fa-upload"></i> Subir Imagen
+                    </button>
+                    
+                    <button id="cameraButton" class="cta-button secondary">
+                        <i class="fas fa-video"></i> Usar Cámara
+                    </button>
+                    
+                    <p class="status-message" id="statusMessage">Cargando modelo... (0%)</p>
+                </div>
+                
+                <div class="detection-area">
+                    <canvas id="detectionCanvas"></canvas> 
+                    
+                    <video id="webcamVideo" autoplay muted style="display: none;"></video>
+                </div>
+                
+            </div>
+            
+            <div class="results-info">
+                <p>Tiempo de Detección: <span id="detectionTime">--</span> ms</p>
+            </div>
+            
+        </section>
+        
+    </main>
+
+    <footer>
+        </footer>
+    
+    <script src="ia-logic.js"></script> 
+</body>
+</html>

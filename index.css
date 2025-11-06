@@ -1,0 +1,247 @@
+
+/* Inicio */
+#inicio {
+    padding-top: 150px; 
+    min-height: 50vh; 
+    padding-bottom: 10px; 
+    
+    background-size: cover; 
+    background-position: center; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#inicio h1 {
+    margin: 12px;
+    font-size: 3.5rem; 
+    font-weight: 700; 
+}
+#inicio p {
+    margin-bottom: 12px; 
+    font-size: 1.2rem;
+}
+
+/* boton */
+.cta-button {
+    margin-top: 10px;
+    background-color: #E30613; 
+    color: white; 
+    border: none;
+    border-radius: 10px; 
+    padding: 14px 32px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #c60512; 
+    color: #ffffff; 
+    transform: scale(1.05); 
+}
+
+/* nosotros */
+#nosotros {
+    text-align: center; 
+    padding: 20px 5%; 
+}
+
+#nosotros h2 {
+    margin-bottom: 10px; 
+    font-size: 2.2rem;
+    color: #333;
+}
+
+#nosotros p {
+    max-width: 700px;
+    margin: 0 auto 40px auto; 
+    font-size: 1.1rem;
+}
+
+
+/* servicios */
+
+.propiedades-servicios { 
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 2rem; 
+    padding: 2rem 5%; 
+    width: 100%;
+}
+
+.grid-full-width {
+    grid-column: 1 / span 2; /* para las dos columnas */
+}
+
+.propiedades-servicios > div { 
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    min-height: 550px; 
+}
+
+.propiedades-servicios > div h3 {
+    text-align: center; 
+}
+
+.propiedades-servicios > div p {
+    text-align: justify; 
+}
+
+.propiedades-servicios > div img {
+    display: block; 
+    margin: 1rem auto; 
+    max-width: 90%; 
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.sitios-web.servicio-card {
+    min-height: auto;
+    display: grid; 
+    grid-template-columns: 2fr 3fr; 
+    gap: 2rem; 
+    align-items: center; 
+    padding: 2rem;
+}
+
+.sitios-web-text-content {
+    text-align: left; 
+    padding-left: 1rem; 
+}
+
+.sitios-web.servicio-card h3 {
+    text-align: left; 
+    font-size: 2.5rem; 
+    margin-bottom: 10px;
+}
+.sitios-web.servicio-card p {
+    text-align: left; 
+}
+
+
+.carta-porte-2-0.servicio-card {
+    min-height: auto;
+    display: grid;
+    grid-template-columns: 3fr 2fr; 
+    gap: 2rem;
+    align-items: center; 
+    padding: 2rem;
+}
+
+.carta-porte-text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    text-align: center; 
+    padding-right: 1rem;
+}
+
+.carta-porte-text-content h3{
+    text-align: right; 
+    font-size: 2.5rem; 
+    margin-bottom: 10px;
+}
+
+.carta-porte-text-content p {
+    text-align: center;
+}
+
+.image-gallery-columns {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin: 0;
+    padding-top: 0;
+    border-top: none;
+}
+
+.image-column {
+    flex: 1; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px; 
+    height: 350px; 
+    overflow: hidden; 
+    position: relative; 
+}
+
+.image-column img {
+    width: 100%; 
+    height: 150px; 
+    object-fit: cover; 
+    margin: 0; 
+}
+
+.scroll-wrapper {
+    position: absolute; 
+    width: 100%; 
+    height: auto; 
+    top: 0; 
+    left: 0;
+}
+
+/* animaciones de las cajas*/
+@keyframes scrollUp {
+    0% { transform: translateY(0); } 
+    100% { transform: translateY(-50%); } 
+}
+
+@keyframes scrollDown {
+    0% { transform: translateY(-50%); } 
+    100% { transform: translateY(0); } 
+}
+
+.column-up .scroll-wrapper {
+    animation-name: scrollUp;
+    animation-duration: 40s; 
+    animation-timing-function: linear; 
+    animation-iteration-count: infinite; 
+}
+
+.column-down .scroll-wrapper {
+    animation-name: scrollDown;
+    animation-duration: 40s; 
+    animation-timing-function: linear; 
+    animation-iteration-count: infinite; 
+}
+
+
+/* responsividad en moviles */
+@media (max-width: 768px) {
+    .propiedades-servicios {
+        grid-template-columns: 1fr; 
+    }
+    
+    .sitios-web.servicio-card,
+    .carta-porte-2-0.servicio-card {
+        grid-template-columns: 1fr; 
+        padding: 1.5rem;
+    }
+    .sitios-web-text-content,
+    .carta-porte-text-content {
+        padding-left: 0;
+        padding-right: 0;
+        text-align: left; 
+    }
+
+    .image-gallery-columns {
+        flex-direction: column; 
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .image-column {
+        height: auto;
+        overflow: visible;
+    }
+}
